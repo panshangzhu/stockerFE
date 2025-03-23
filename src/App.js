@@ -100,6 +100,20 @@ const App = () => {
     writeFile(workbook, "StockData.xlsx");
   };
 
+  const constructData = (KeyValue) => {
+    try{
+      if(typeof KeyValue === 'string') {
+        return KeyValue;
+      } else if(typeof KeyValue === 'object' && Object.keys(KeyValue)?.length > 0) {
+        let returnString = Object.keys(KeyValue).map(key => `${key}=${KeyValue[key]}`).join("&");
+        return returnString
+      }
+    } catch(err) {
+
+    }
+
+  }
+
   return (
     <div className={classes.root}>
       <Drawer variant="permanent" anchor="left" className={classes.drawer}>
@@ -140,7 +154,7 @@ const App = () => {
                 <TableRow key={symbol}>
                   <TableCell>{symbol}</TableCell>
                   {selectedKeys.map((key) => (
-                    <TableCell key={key}>{data[symbol]?.[key] || "N/A"}</TableCell>
+                    <TableCell key={key}>{data[symbol]?.[key] ? constructData(data[symbol]?.[key]) : "N/A"}</TableCell>
                   ))}
                 </TableRow>
               ))}
