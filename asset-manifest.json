@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/stockerFE/static/css/main.e6c13ad2.css",
+    "main.js": "/stockerFE/static/js/main.e6ffcdf0.js",
+    "index.html": "/stockerFE/index.html",
+    "main.e6c13ad2.css.map": "/stockerFE/static/css/main.e6c13ad2.css.map",
+    "main.e6ffcdf0.js.map": "/stockerFE/static/js/main.e6ffcdf0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.e6ffcdf0.js"
+  ]
+}
