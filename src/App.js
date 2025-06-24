@@ -102,7 +102,7 @@ const App = () => {
 
   const constructData = (KeyValue) => {
     try{
-      if(typeof KeyValue === 'string') {
+      if(typeof KeyValue === 'string' || typeof KeyValue === 'number') {
         return KeyValue;
       } else if(typeof KeyValue === 'object' && Object.keys(KeyValue)?.length > 0) {
         let returnString = Object.keys(KeyValue).map(key => `${key}=${KeyValue[key]}`).join("&");
